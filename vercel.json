@@ -1,4 +1,10 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/*.js": { "memory": 1024, "maxDuration": 10 }
+  }
+}
+{
   "version": 2,
   "builds": [
     {
@@ -36,7 +42,7 @@
       ]
     }
   ],
-  "framework": "nextjs@latest",
+  "framework": "nextjs",
   "regions": ["dca1"],
   "public": false,
   "cleanUrls": true,

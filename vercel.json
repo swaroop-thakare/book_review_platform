@@ -5,7 +5,8 @@
       "src": "package.json",
       "use": "@vercel/next",
       "config": {
-        "distDir": ".next"
+        "distDir": ".next",
+        "nodeVersion": "18.x"
       }
     }
   ],
@@ -39,6 +40,5 @@
   "regions": ["dca1"],
   "public": false,
   "cleanUrls": true,
-  "trailingSlash": false,
-  "overrideNodeVersion": "18.x"
+  "trailingSlash": false
 }

@@ -1,12 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "api/*.js": { "memory": 1024, "maxDuration": 10 }
-  }
-}
-{
-  "version": 2,
-  "builds": [
+  "functions": [
     {
       "src": "package.json",
       "use": "@vercel/next",
@@ -16,33 +10,6 @@
       }
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  "build": {
-    "env": {
-      "NEXT_PUBLIC_VERCEL_ENV": "production"
-    }
-  },
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'"
-        }
-      ]
-    }
-  ],
-  "framework": "nextjs",
   "regions": ["dca1"],
   "public": false,
   "cleanUrls": true,

@@ -2,8 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "buildCommand": "next build",
-  "outputDirectory": ".next",
-  "framework": "nextjs",
+  "framework": "nextjs@latest",
   "functions": {
     "app/api/**/*": {
       "memory": 1024,
